@@ -2,11 +2,11 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'gadslh'
+name: 'mm_dbt'
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'name of your profile file'
+profile: 'geoff.parent@mightyhive.com'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -33,14 +33,14 @@ models:
                 staging:
                         materialized: ephemeral
         vars: 
-                t_campaignStats: 'name of campaignStats table'
-                t_campaign: 'name of campaign table'
-                t_ads: 'name of ads table'
-                t_adStats: 'name of adStats table`'
-                t_campaignConv: 'name of campaignConversionStats table'
-                t_adGroupStats: 'name of adGroupStats table'
-                t_adGroup: 'name of adGroup table'
-                t_adGroupConv: 'name of adGroupConversions table'
+                t_campaignStats: 'google_ads.p_CampaignStats_7848858518'
+                t_campaign: 'p_Campaign_7848858518'
+                t_ads: 'p_Ad_7848858518'
+                t_adStats: 'p_AdStats_7848858518'
+                t_campaignConv: 'p_CampaignConversionStats_7848858518'
+                t_adGroupStats: 'p_AdGroupStats_7848858518'
+                t_adGroup: 'p_AdGroup_7848858518'
+                t_adGroupConv: 'p_AdGroupConversionStats_7848858518'
                 convName1: 'name of first conversion'
                 convName2: 'name of second conversion'
                 convName3: 'name of third conversion'
