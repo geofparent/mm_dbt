@@ -42,8 +42,8 @@ models:
                 t_adGroupStats: '`google_ads.p_AdGroupStats_7848858518`'
                 t_adGroup: '`google_ads.p_AdGroup_7848858518`'
                 t_adGroupConv: '`google_ads.p_AdGroupConversionStats_7848858518`'
-                convName1: '`name of first conversion`'
-                convName2: '`name of second conversion`'
-                convName3: '`name of third conversion`'
+                convName1: '"name of first conversion"'
+                convName2: '"name of second conversion"'
+                convName3: '"name of third conversion"'
                 
   
