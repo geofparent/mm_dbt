@@ -4,9 +4,10 @@
 # name or the intended use of these models
 name: 'mm_dbt'
 version: '1.0.0'
+config-version: 2
 
 # This setting configures which "profile" dbt uses for this project.
-profile: 'geoff.parent@mightyhive.com'
+profile: 'default'
 
 # These configurations specify where dbt should look for different types of files.
 # The `source-paths` config, for example, states that models in this project can be
@@ -35,12 +36,12 @@ models:
         vars: 
                 t_campaignStats: 'google_ads.p_CampaignStats_7848858518'
                 t_campaign: 'google_ads.p_Campaign_7848858518'
-                t_ads: 'p_Ad_7848858518'
-                t_adStats: 'p_AdStats_7848858518'
-                t_campaignConv: 'p_CampaignConversionStats_7848858518'
-                t_adGroupStats: 'p_AdGroupStats_7848858518'
-                t_adGroup: 'p_AdGroup_7848858518'
-                t_adGroupConv: 'p_AdGroupConversionStats_7848858518'
+                t_ads: 'google_ads.p_Ad_7848858518'
+                t_adStats: 'google_ads.p_AdStats_7848858518'
+                t_campaignConv: 'google_ads.p_CampaignConversionStats_7848858518'
+                t_adGroupStats: 'google_ads.p_AdGroupStats_7848858518'
+                t_adGroup: 'google_ads.p_AdGroup_7848858518'
+                t_adGroupConv: 'google_ads.p_AdGroupConversionStats_7848858518'
                 convName1: 'name of first conversion'
                 convName2: 'name of second conversion'
                 convName3: 'name of third conversion'
