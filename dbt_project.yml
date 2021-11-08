@@ -34,7 +34,7 @@ models:
                         materialized: ephemeral
         vars: 
                 t_campaignStats: 'google_ads.p_CampaignStats_7848858518'
-                t_campaign: 'p_Campaign_7848858518'
+                t_campaign: 'google_ads.p_Campaign_7848858518'
                 t_ads: 'p_Ad_7848858518'
                 t_adStats: 'p_AdStats_7848858518'
                 t_campaignConv: 'p_CampaignConversionStats_7848858518'
