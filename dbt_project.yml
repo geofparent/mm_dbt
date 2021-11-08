@@ -34,16 +34,16 @@ models:
                 staging:
                         materialized: ephemeral
         vars: 
-                t_campaignStats: `google_ads.p_CampaignStats_7848858518`
-                t_campaign: `google_ads.p_Campaign_7848858518`
-                t_ads: `google_ads.p_Ad_7848858518`
+                t_campaignStats: '`google_ads.p_CampaignStats_7848858518`'
+                t_campaign: '`google_ads.p_Campaign_7848858518`'
+                t_ads: '`google_ads.p_Ad_7848858518`'
                 t_adStats: `google_ads.p_AdStats_7848858518`
-                t_campaignConv: `google_ads.p_CampaignConversionStats_7848858518`
-                t_adGroupStats: `google_ads.p_AdGroupStats_7848858518`
-                t_adGroup: `google_ads.p_AdGroup_7848858518`
-                t_adGroupConv: `google_ads.p_AdGroupConversionStats_7848858518`
-                convName1: `name of first conversion`
-                convName2: `name of second conversion`
-                convName3: `name of third conversion`
+                t_campaignConv: '`google_ads.p_CampaignConversionStats_7848858518`'
+                t_adGroupStats: '`google_ads.p_AdGroupStats_7848858518`'
+                t_adGroup: '`google_ads.p_AdGroup_7848858518`'
+                t_adGroupConv: '`google_ads.p_AdGroupConversionStats_7848858518`'
+                convName1: '`name of first conversion`'
+                convName2: '`name of second conversion`'
+                convName3: '`name of third conversion`'
                 
   
