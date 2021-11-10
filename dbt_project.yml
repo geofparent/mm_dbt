@@ -27,11 +27,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
 models:
-        gadslh:
+        mm_dbt:
                 production: 
                         materialized: table
                 staging:
-                        materialized: ephemeral
+                        materialized: view
 vars:
 
         t_campaignStats: '`google_ads.p_CampaignStats_7848858518`'
