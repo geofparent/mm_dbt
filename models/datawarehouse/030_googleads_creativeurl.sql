@@ -18,13 +18,13 @@ s.year,
 FROM {{ref('stg_creativeBase')}} s
 JOIN {{ref('stg_creativeLookup')}} u
 ON u.campaignId = s.campaignId AND u.CreativeId = s.CreativeId
-LEFT JOIN {{ref('stg_creativeImpressions')}} im
+LEFT JOIN {{ref('020_creativeImpressions')}} im
 ON s.CreativeId = im.CreativeId 
 AND s.ISOWEEK = im.ISOWEEK
 AND s.month = im.month
 AND s.year = im.year
-JOIN {{ref('stg_campaignLookup')}} c
+JOIN {{ref('020_campaignLookup')}} c
 ON c.campaignId = s.campaignId 
-LEFT JOIN {{ref('stg_adGroupLookup')}} al
+LEFT JOIN {{ref('020_adGroupLookup')}} al
 ON s.AdGroupId = al.AdGroupId
 GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12

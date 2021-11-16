@@ -18,12 +18,12 @@ s.year,
 (s.Cost/NULLIF(s.Clicks,0)) cpc, 
 (s.Cost/NULLIF(s.Conversions,0)) CostPerConv
 FROM {{ref('stg_textAds')}} ta
-LEFT JOIN {{ref('stg_creativeImpressions')}} im
+LEFT JOIN {{ref('020_creativeImpressions')}} im
 ON ta.CreativeId = im.CreativeId 
-JOIN {{ref('stg_campaignLookup')}} cl
+JOIN {{ref('020_campaignLookup')}} cl
 ON cl.campaignId = ta.campaignId
-LEFT JOIN {{ref('stg_creativeBase')}} s
+LEFT JOIN {{ref('020_creativeBase')}} s
 ON ta.creativeId = s.creativeId
-LEFT JOIN {{ref('stg_adGroupLookup')}} al
+LEFT JOIN {{ref('020_adGroupLookup')}} al
 ON ta.AdGroupId = al.AdGroupId
 GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14

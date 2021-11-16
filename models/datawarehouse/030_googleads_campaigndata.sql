@@ -10,16 +10,16 @@ cc.conv3,
 (sum(cb.cost) / sum(NULLIF(cb.clicks,0))) cpc,
 (sum(cc.Conversions) / sum(NULLIF(cb.clicks,0))) convRate,
 (sum(cb.Cost) / sum(NULLIF(cc.Conversions, 0))) costPerConv
-FROM {{ref('stg_campaignBase')}} cb
-JOIN {{ref('stg_campaignLookup')}} cm
+FROM {{ref('020_campaignBase')}} cb
+JOIN {{ref('020_campaignLookup')}} cm
 ON cb.campaignId = cm.campaignId
-LEFT JOIN {{ref('stg_campaignImpressions')}} im
+LEFT JOIN {{ref('020_campaignImpressions')}} im
 ON cb.campaignId = im.campaignId 
 AND cb.externalCustomerId = im.externalCustomerId
 AND cb.ISOWEEK = im.ISOWEEK
 AND cb.month = im.month
 AND cb.year = im.year
-LEFT JOIN {{ref('stg_campaignConversions')}} cc
+LEFT JOIN {{ref('020_campaignConversions')}} cc
 ON cb.campaignId = cc.campaignId
 AND cb.ISOWEEK = cc.ISOWEEK
 AND cb.month = cc.month
