@@ -11,17 +11,17 @@ ac.conv3,
 (sum(ab.cost) / sum(NULLIF(ab.clicks,0))) cpc,
 (sum(ac.Conversions) / sum(NULLIF(ab.clicks,0))) convRate,
 (sum(ab.Cost) / sum(NULLIF(ac.Conversions, 0))) costPerConv
-FROM {{ref('stg_adGroupBase')}} ab
-LEFT JOIN {{ref('stg_adGroupImpressions')}} im
+FROM {{ref('020_adGroupBase')}} ab
+LEFT JOIN {{ref('020_adGroupImpressions')}} im
 ON ab.AdGroupId = im.AdGroupId 
 AND ab.ISOWEEK = im.ISOWEEK
 AND ab.month = im.month
 AND ab.year = im.year
-JOIN {{ref('stg_adGroupLookup')}} al
+JOIN {{ref('020_adGroupLookup')}} al
 ON ab.AdGroupId = al.AdGroupId
-JOIN {{ref('stg_campaignLookup')}} cm
+JOIN {{ref('020_campaignLookup')}} cm
 ON ab.campaignId = cm.campaignId
-LEFT JOIN {{ref('stg_adGroupConversions')}} ac
+LEFT JOIN {{ref('020_adGroupConversions')}} ac
 ON ab.AdGroupId = ac.AdGroupId
 AND ab.ISOWEEK = ac.ISOWEEK
 AND ab.month = ac.month
